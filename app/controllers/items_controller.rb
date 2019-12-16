@@ -4,14 +4,28 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.paginate(page: params[:page], per_page: 10)
-    respond_to do |format|
-      format.xlsx {
-        response.headers['Content-Disposition'] = "attachment; filename = 'items.xlsx'"
-      }
-      format.html {render :index}
+    if request.format == "xlsx"
+      @items = Item.all
+    else
+      @items = Item.paginate(page: params[:page], per_page: 10)
+      respond_to do |format|
+        format.xlsx {
+          response.headers['Content-Disposition'] = "attachment; filename = 'items.xlsx'"
+        }
+        format.html {render :index}
+      end
     end
   end
+
+  # def index
+  #   @items = Item.paginate(page: params[:page], per_page: 10)
+  #   respond_to do |format|
+  #     format.xlsx {
+  #       response.headers['Content-Disposition'] = "attachment; filename = 'items.xlsx'"
+  #     }
+  #     format.html {render :index}
+  #   end
+  # end
 
   # GET /items/1
   # GET /items/1.json
