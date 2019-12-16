@@ -23,6 +23,9 @@ gem 'axlsx'
 gem 'axlsx_rails'
 # Roo can access the contents of various spreadsheet files.
 gem 'roo', '~> 2.8', '>= 2.8.2'
+gem 'will_paginate', '~> 3.2', '>= 3.2.1'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
