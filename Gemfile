@@ -21,6 +21,8 @@ gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'rubyzip'
 gem 'axlsx'
 gem 'axlsx_rails'
+# Roo can access the contents of various spreadsheet files.
+gem 'roo', '~> 2.8', '>= 2.8.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
