@@ -16,7 +16,7 @@ wb.styles do |style|
     # Create the database reference row
     sheet.add_row ["id", "name", "quantity"], style: heading
     # Create entries for each item
-    @items.each do |item|
+    items.each do |item|
       sheet.add_row [item.id, item.name, item.quantity]
     end
   end
